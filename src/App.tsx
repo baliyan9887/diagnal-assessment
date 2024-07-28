@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// src/App.tsx
 
-function App() {
+import React from 'react';
+import { MovieProvider } from './context/MovieContext';
+import MovieGrid from './components/MovieGrid';
+import AppBar from './components/AppBar';
+import SearchBar from './components/SearchBar';
+import styled from 'styled-components';
+
+const AppContainer = styled.div`
+  background-color: #171717;
+  min-height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+`;
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MovieProvider>
+      <AppBar />
+      <AppContainer>
+        <MovieGrid />
+      </AppContainer>
+    </MovieProvider>
   );
-}
+};
 
 export default App;
