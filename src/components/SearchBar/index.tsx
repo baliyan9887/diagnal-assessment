@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Search as SearchIcon, XCircle as CloseIcon } from 'react-feather';
 import { MovieContext } from '../../context/MovieContext';
 import {

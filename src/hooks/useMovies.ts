@@ -1,5 +1,3 @@
-// src/hooks/useMovies.ts
-
 import { useState, useEffect, useRef, useCallback } from 'react';
 import axios from 'axios';
 import { Movie } from '../types';
@@ -18,7 +16,6 @@ export const useMovies = () => {
         `https://test.create.diagnal.com/data/page${pageNum}.json`
       );
 
-      console.log('Respo', response.data.page['content-items'].content);
       // Check if response.data.content is an array
       const data = response.data.page['content-items'].content;
 
@@ -48,6 +45,7 @@ export const useMovies = () => {
 
   useEffect(() => {
     if (hasMore) fetchMovies(page);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   const loadMoreMovies = useCallback(() => {
@@ -71,6 +69,7 @@ export const useMovies = () => {
 
     return () => {
       if (observerRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(observerRef.current);
       }
     };

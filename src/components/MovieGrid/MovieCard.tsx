@@ -4,8 +4,6 @@ import React from 'react';
 import { MovieCardProps } from '../../types';
 import { Card, Title, Image } from '../../styles/MovieGrid';
 
-const fallbackImage = 'https://via.placeholder.com/100x150';
-
 const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   console.log('Image URL', movie);
 

@@ -2,7 +2,7 @@
 
 import React, { createContext, useState, useMemo, ReactNode } from 'react';
 import { useMovies } from '../hooks/useMovies';
-import { Movie, MovieContextProps } from '../types';
+import { MovieContextProps } from '../types';
 
 export const MovieContext = createContext<MovieContextProps>({
   movies: [],

@@ -4,7 +4,6 @@ import React from 'react';
 import { MovieProvider } from './context/MovieContext';
 import MovieGrid from './components/MovieGrid';
 import AppBar from './components/AppBar';
-import SearchBar from './components/SearchBar';
 import styled from 'styled-components';
 
 const AppContainer = styled.div`
